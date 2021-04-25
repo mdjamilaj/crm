@@ -1,0 +1,71 @@
+.v-sheet.v-app-bar.v-toolbar:not(.v-sheet--outlined){
+    box-shadow: none !important;
+}
+.theme--light.v-app-bar.v-toolbar.v-sheet
+{
+    background-color: unset !important;
+}
+.theme--light.v-application {
+    background: #F3F3F3 !important;
+}
+.v-application--is-ltr .v-list-item__action:first-child, .v-application--is-ltr .v-list-item__icon:first-child {
+    margin-right: 15px !important;
+}
+.v-list-item--active{
+    color: #35BBB4 !important;
+    background: #E2F5F5;
+    border-right: 4px solid;
+}
+.v-list-item-custom{
+    padding: 0 16px 0 26px !important;
+    min-height: 40px !important;
+}
+.v-list-item__action-custom{
+    margin: 8px 0 !important;
+}
+.v-btn-custom-header{
+    height: unset !important;
+    width: unset !important;
+}
+.v-btn-custom-header span{
+    height: 100% !important;
+    width: 100% !important;
+}
+.fs-12{
+    font-size: 12px;
+}
+.v-menu__content{
+    top: 55px !important;
+    border-radius: 8px !important;
+    box-shadow: unset !important;
+}
+.badge-notification {
+    z-index: 99999999;
+    position: absolute;
+    transform: translate(15px, -5px);
+}
+.badge-notification span span{    
+    min-width: 16px;
+    padding: 2px 1px;
+    font-size: 10px;
+    height: 16px;
+}
+.btn-shadow{
+    box-shadow: 16px 16px 38px rgba(0, 0, 0, 0.05) !important;
+}
+.card-shadow{
+    box-shadow: 16px 16px 42px rgba(51, 51, 51, 0.12) !important;
+}
+.custom-scrollbar::-webkit-scrollbar {
+    width: 5px;
+}
+.custom-scrollbar::-webkit-scrollbar-track {
+    background: #d6fcff; 
+}
+.custom-scrollbar::-webkit-scrollbar-thumb {
+    background: #76eaf0; 
+    border-radius:5px;
+}
+.custom-scrollbar::-webkit-scrollbar-thumb:hover {
+    background: #47d9e0; 
+} 
