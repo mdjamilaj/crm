@@ -431,7 +431,7 @@
       <!-- Notification End -->
     </v-app-bar>
     <v-main>
-      <v-container>
+      <v-container :fluid="true">
         <nuxt />
       </v-container>
     </v-main>
@@ -522,8 +522,8 @@ export default {
         },
         {
           icon: 'mdi-chart-bubble',
-          title: 'Service',
-          to: '/service',
+          title: 'Feedback',
+          to: '/feedback',
         },
         {
           icon: 'mdi-chart-bubble',

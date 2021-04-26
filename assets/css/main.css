@@ -69,3 +69,14 @@
 .custom-scrollbar::-webkit-scrollbar-thumb:hover {
     background: #47d9e0; 
 } 
+.card-border{
+    border-radius: 16px !important;
+}
+.v-select-custom div div{
+    box-shadow: none !important;
+    margin: 0 !important;
+    padding: 0 !important
+}
+.custom-pagination nav ul{
+    justify-content: flex-end !important;
+}
