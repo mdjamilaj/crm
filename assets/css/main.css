@@ -3,7 +3,7 @@
 }
 .theme--light.v-app-bar.v-toolbar.v-sheet
 {
-    background-color: unset !important;
+    background: #F3F3F3 !important;
 }
 .theme--light.v-application {
     background: #F3F3F3 !important;
@@ -35,10 +35,14 @@
     font-size: 12px;
 }
 .v-menu__content{
-    top: 55px !important;
+    box-shadow: 16px 16px 42px rgba(51, 51, 51, 0.12) !important;
+}
+.v-menu__content--fixed{
+    /* top: 55px !important; */
     border-radius: 8px !important;
     box-shadow: unset !important;
 }
+
 .badge-notification {
     z-index: 99999999;
     position: absolute;
@@ -69,8 +73,11 @@
 .custom-scrollbar::-webkit-scrollbar-thumb:hover {
     background: #47d9e0; 
 } 
-.card-border{
-    border-radius: 16px !important;
+.card-border, .btn-border{
+    border-radius: 8px !important;
+}
+.small-border{
+    border: 1.6px solid #E5E5E5;
 }
 .v-select-custom div div{
     box-shadow: none !important;
@@ -79,4 +86,24 @@
 }
 .custom-pagination nav ul{
     justify-content: flex-end !important;
+}
+.feedback-custom-margin{
+    margin: 40px 40px 0px 65px !important;
+}
+.center-div{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -moz-transform: translateX(-50%) translateY(-50%);
+    -webkit-transform: translateX(-50%) translateY(-50%);
+    transform: translateX(-50%) translateY(-50%);
+}
+
+@media screen and (max-width: 768px) {
+    .feedback-custom-margin{
+        margin: 15px 10px 0px 10px !important;
+    }
+    .sm-d-none{
+        display: none !important;
+    }
 }

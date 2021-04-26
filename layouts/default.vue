@@ -37,7 +37,8 @@
       <v-btn icon size="28" @click.stop="drawer = !drawer">
         <v-icon>mdi-text</v-icon>
       </v-btn>
-      <v-spacer class="text-center justify-center mt-2">
+      <div class="subtitle-1">{{ headerTitle }}</div>
+      <v-spacer class="text-center justify-center mt-2 mx-2">
         <v-text-field
           outlined
           dense
@@ -45,7 +46,7 @@
           append-icon="mdi-magnify"
           placeholder="Search someting were"
           hide-details
-          class="my-sm-0 my-3 mx-auto"
+          class="my-sm-0 my-3 mx-auto sm-d-none"
           style="max-width: 300px"
         >
         </v-text-field>
@@ -144,9 +145,13 @@
     </v-menu> -->
       <!-- Message Start -->
       <v-menu
+        v-model="message_menu"
         :close-on-content-click="false"
         :nudge-width="350"
-        offset-x
+        :nudge-left="290"
+        :nudge-bottom="2"
+        offset-y
+        :transition="true"
         max-width="350"
         min-width="350"
       >
@@ -169,6 +174,13 @@
           </v-btn>
         </template>
 
+        <div style="width: 100%">
+          <img
+            src="~/assets/img/arrow-up.svg"
+            alt=""
+            style="position: relative; top: 8px; left: 285px;z-index:99;"
+          />
+        </div>
         <v-card id="notification">
           <v-list>
             <v-list-item>
@@ -245,11 +257,9 @@
       <v-menu
         v-model="menu"
         :close-on-content-click="false"
-        :nudge-width="200"
-        :nudge-left="300"
-        :offset-overflow="true"
-        :position-x="5000"
-        :position-y="150"
+        :nudge-left="290"
+        :nudge-bottom="2"
+        offset-y
         :transition="true"
         max-width="350"
         min-width="350"
@@ -277,7 +287,7 @@
           <img
             src="~/assets/img/arrow-up.svg"
             alt=""
-            style="position: relative; top: 8px; left: 295px"
+            style="position: relative; top: 8px; left: 285px;z-index:99;"
           />
         </div>
         <v-card id="notification" class="card-shadow">
@@ -358,7 +368,8 @@
         v-model="user_menu"
         :close-on-content-click="false"
         :nudge-width="150"
-        offset-x
+        :nudge-bottom="10"
+        offset-y
         max-width="155"
       >
         <template v-slot:activator="{ on, attrs }">
@@ -372,7 +383,7 @@
           >
             <v-img
               :src="require('../assets/img/user-img.png')"
-              class="rounded-circle"
+              class="rounded-circle mr-3"
               width="40"
               height="40"
             ></v-img>
@@ -398,7 +409,7 @@
                 </span>
               </div>
             </v-avatar> -->
-            <h4 class="ml-2 mr-5" style="color: #555555">Hi, Shuvo</h4>
+            <h4 class="mr-5 sm-d-none" style="color: #555555">Hi, Shuvo</h4>
           </v-btn>
         </template>
 
@@ -430,7 +441,11 @@
       </div> -->
       <!-- Notification End -->
     </v-app-bar>
-    <v-main>
+    <v-main
+      :style="{ backgroundImage: `url(${bg})` }"
+      style="background-position: center"
+    >
+      <!-- <img src="@/assets/img/bg.png" alt=""> -->
       <v-container :fluid="true">
         <nuxt />
       </v-container>
@@ -442,9 +457,10 @@
 export default {
   data() {
     return {
+      bg: require('@/assets/img/bg.png'),
       notification: [
         {
-          id: 4,
+          id: 1,
           user_id: 2,
           title: 'New Staff Added',
           body: 'New Staff Muhammad Jamil Added! Find Out More!',
@@ -460,7 +476,7 @@ export default {
           deleted_at: null,
         },
         {
-          id: 4,
+          id: 2,
           user_id: 2,
           title: 'New Staff Added',
           body: 'New Staff Find Out More!',
@@ -476,7 +492,7 @@ export default {
           deleted_at: null,
         },
         {
-          id: 4,
+          id: 3,
           user_id: 2,
           title: 'New Staff Added',
           body: 'New Staff Muhammad Jamil Added! Find Out More!',
@@ -508,6 +524,7 @@ export default {
           deleted_at: null,
         },
       ],
+      message_menu: false,
       user_menu: false,
       menu: false,
       notificationUnseen: 1,
@@ -516,26 +533,42 @@ export default {
       fixed: false,
       items: [
         {
-          icon: 'mdi-apps',
+          icon: 'mdi-view-dashboard-outline',
           title: 'Dashboard',
           to: '/',
         },
         {
-          icon: 'mdi-chart-bubble',
+          icon: 'mdi-dog-service',
+          title: 'Service',
+          to: '/service',
+        },
+        {
+          icon: 'mdi-package-variant-closed',
+          title: 'Packege',
+          to: '/packege',
+        },
+        {
+          icon: 'mdi-message-draw',
           title: 'Feedback',
           to: '/feedback',
         },
         {
-          icon: 'mdi-chart-bubble',
-          title: 'Packege',
-          to: '/packege',
+          icon: 'mdi-newspaper',
+          title: 'Newsfeed',
+          to: '/newsfeed',
         },
       ],
       miniVariant: false,
       right: true,
       rightDrawer: false,
-      title: 'Vuetify.js',
     }
+  },
+  computed: {
+    headerTitle: {
+      get() {
+        return this.$store.state.common.headerTitle
+      },
+    },
   },
 }
 </script>

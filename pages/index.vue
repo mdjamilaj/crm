@@ -8,6 +8,8 @@
 
 <script>
 export default {
-  
+  beforeMount() {
+    this.$store.commit('common/setHeaderTitle', '')
+  },
 }
 </script>

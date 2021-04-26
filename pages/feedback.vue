@@ -37,6 +37,7 @@
             dense
             solo
             hide-details="auto"
+            :menu-props="select_props"
           ></v-select>
         </v-col>
         <v-col class="px-8 py-5" xs="12" sm="4" md="4">
@@ -48,6 +49,7 @@
             dense
             solo
             hide-details="auto"
+            :menu-props="select_props"
           ></v-select>
         </v-col>
         <v-col class="px-8 py-5" xs="12" sm="4" md="4">
@@ -59,6 +61,7 @@
             dense
             solo
             hide-details="auto"
+            :menu-props="select_props"
           ></v-select>
         </v-col>
       </v-row>
@@ -92,7 +95,7 @@
             </div>
           </v-col>
         </v-row>
-        <div class="ma-10 mb-0 body-2">
+        <div class="feedback-custom-margin mb-0 body-2">
           I am an early-stage startup founder with some engineering experience.
           I understand that market research and design come before building. I
           reached out to Masum after seeing his portfolio and knew I needed to
@@ -129,7 +132,7 @@
             </div>
           </v-col>
         </v-row>
-        <div class="ma-10 mb-0 body-2">
+        <div class="feedback-custom-margin mb-0 body-2">
           I am an early-stage startup founder with some engineering experience.
           I understand that market research and design come before building. I
           reached out to Masum after seeing his portfolio and knew I needed to
@@ -166,7 +169,7 @@
             </div>
           </v-col>
         </v-row>
-        <div class="ma-10 mb-0 body-2">
+        <div class="feedback-custom-margin mb-0 body-2">
           I am an early-stage startup founder with some engineering experience.
           I understand that market research and design come before building. I
           reached out to Masum after seeing his portfolio and knew I needed to
@@ -203,7 +206,7 @@
             </div>
           </v-col>
         </v-row>
-        <div class="ma-10 mb-0 body-2">
+        <div class="feedback-custom-margin mb-0 body-2">
           I am an early-stage startup founder with some engineering experience.
           I understand that market research and design come before building. I
           reached out to Masum after seeing his portfolio and knew I needed to
@@ -225,6 +228,10 @@
 export default {
   data() {
     return {
+      select_props: {
+        "offset-y": true,
+
+      },
       page: 1,
       software: 'Web Development',
       items: [
@@ -234,6 +241,9 @@ export default {
         'Project Management',
       ],
     }
+  },
+  beforeMount() {
+    this.$store.commit('common/setHeaderTitle', '')
   },
 }
 </script>
