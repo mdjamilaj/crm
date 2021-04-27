@@ -119,11 +119,242 @@
                           class="text-none ma-2 d-flex align-center upload-img-custom"
                           round
                           depressed
-                          :loading="isSelecting"
                           @click="onButtonClick"
                         >
                           <div>
-                            <v-icon> mdi-cloud-upload-outline </v-icon> <br>
+                            <v-icon> mdi-cloud-upload-outline </v-icon> <br />
+                            {{ buttonText }}
+                          </div>
+                        </div>
+                        <input
+                          ref="uploader"
+                          class="d-none"
+                          type="file"
+                          accept="image/*"
+                          @change="onFileChanged"
+                        />
+                      </v-card>
+                    </v-tab-item>
+                  </v-tabs-items>
+                </v-card>
+              </v-tab-item>
+              <v-tab-item key="2">
+                <v-card class="mt-3 shadow-none">
+                  <v-tabs
+                    v-model="project_cover.tab"
+                    centered
+                    active-class="project_profile_tab_btn_active"
+                    hide-slider
+                    slider-color="white"
+                  >
+                    <v-tab key="1" class="project_profile_tab_btn">
+                      <v-icon size="18" class="mr-1">mdi-select-color</v-icon>
+                      Color
+                    </v-tab>
+                    <v-tab key="2" class="project_profile_tab_btn">
+                      <v-icon size="18" class="mr-1">mdi-image-outline</v-icon>
+                      Image
+                    </v-tab>
+                    <v-tab key="3" class="project_profile_tab_btn">
+                      <v-icon size="18" class="mr-1"
+                        >mdi-cloud-upload-outline</v-icon
+                      >
+                      Upload
+                    </v-tab>
+                  </v-tabs>
+                  <v-tabs-items v-model="project_cover.tab">
+                    <v-tab-item key="1">
+                      <v-card class="shadow-none pt-4">
+                        <v-row class="ma-0">
+                          <v-col md="3" class="pa-2 rounded-lg">
+                            <div
+                              class="project_profile_custom_color_div cursor-pointer"
+                              style="background: #126e82"
+                              @click="project_cover.select_color = '#126E82'
+                              "
+                            ></div>
+                          </v-col>
+                          <v-col md="3" class="pa-2 rounded-lg">
+                            <div
+                              class="project_profile_custom_color_div cursor-pointer"
+                              style="background: #2C3E50"
+                              @click="project_cover.select_color = '#2C3E50'
+                              "
+                            ></div>
+                          </v-col>
+                          <v-col md="3" class="pa-2 rounded-lg">
+                            <div
+                              class="project_profile_custom_color_div cursor-pointer"
+                              style="background: #2C3E50"
+                              @click="project_cover.select_color = '#2C3E50'
+                              "
+                            ></div>
+                          </v-col>
+                        </v-row>
+                      </v-card>
+                    </v-tab-item>
+                    <v-tab-item key="2">
+                      <v-card class="pt-4 shadow-none">
+                        {{ project_cover.selected_img }}
+                        <v-row class="ma-0">
+                          <v-col
+                            md="3"
+                            class="pa-2 rounded-lg"
+                            v-for="index in 6"
+                            :key="index"
+                          >
+                            <input
+                              type="radio"
+                              :id="index"
+                              :value="index"
+                              v-model="project_cover.selected_img"
+                              style="display: none"
+                              class="image_select_radio"
+                            />
+                            <label :for="index"
+                              ><img
+                                src="~/assets/img/project_profile_image.svg"
+                                class="text-center mx-auto rounded-lg cursor-pointer"
+                                height="80"
+                              />
+                              <v-icon class="check_icon_img"
+                                >mdi-check-circle-outline</v-icon
+                              >
+                            </label>
+                          </v-col>
+                        </v-row>
+                      </v-card>
+                    </v-tab-item>
+                    <v-tab-item key="3">
+                      <v-card class="pt-4 shadow-none">
+                        <div
+                          class="text-none ma-2 d-flex align-center upload-img-custom"
+                          round
+                          depressed
+                          @click="onButtonClickCover"
+                        >
+                          <div>
+                            <v-icon> mdi-cloud-upload-outline </v-icon> <br />
+                            {{ buttonTextCover }}
+                          </div>
+                        </div>
+                        <input
+                          ref="uploader"
+                          class="d-none"
+                          type="file"
+                          accept="image/*"
+                          @change="onFileChangedCover"
+                        />
+                      </v-card>
+                    </v-tab-item>
+                  </v-tabs-items>
+                </v-card>
+              </v-tab-item>
+              <v-tab-item key="3">
+                <v-card class="mt-3 shadow-none">
+                  <v-tabs
+                    v-model="project_profile.tab"
+                    centered
+                    active-class="project_profile_tab_btn_active"
+                    hide-slider
+                    slider-color="white"
+                  >
+                    <v-tab key="1" class="project_profile_tab_btn">
+                      <v-icon
+                        size="18"
+                        class="mr-1"
+                        v-if="project_profile.select_emoji == ''"
+                        >mdi-emoticon-angry-outline</v-icon
+                      >
+                      <span v-else>{{ project_profile.select_emoji }}</span>
+                      Icon
+                    </v-tab>
+                    <v-tab key="2" class="project_profile_tab_btn">
+                      <v-icon size="18" class="mr-1">mdi-image-outline</v-icon>
+                      Image
+                    </v-tab>
+                    <v-tab key="3" class="project_profile_tab_btn">
+                      <v-icon size="18" class="mr-1"
+                        >mdi-cloud-upload-outline</v-icon
+                      >
+                      Upload
+                    </v-tab>
+                  </v-tabs>
+                  <v-tabs-items v-model="project_profile.tab">
+                    <v-tab-item key="1">
+                      <v-card class="shadow-none">
+                        <v-row class="ma-0">
+                          <v-col md="3" class="pa-2 rounded-lg">
+                            <div
+                              class="project_profile_custom_color_div"
+                              style="background: #126e82"
+                              @click="
+                                this.project_cover.select_color = '#126E82'
+                              "
+                            ></div>
+                          </v-col>
+                          <v-col md="3" class="pa-2 rounded-lg">
+                            <div
+                              class="project_profile_custom_color_div"
+                              style="background: #126e82"
+                              @click="
+                                this.project_cover.select_color = '#126E82'
+                              "
+                            ></div>
+                          </v-col>
+                          <v-col md="3" class="pa-2 rounded-lg">
+                            <div
+                              class="project_profile_custom_color_div"
+                              style="background: #126e82"
+                              @click="
+                                this.project_cover.select_color = '#126E82'
+                              "
+                            ></div>
+                          </v-col>
+                        </v-row>
+                      </v-card>
+                    </v-tab-item>
+                    <v-tab-item key="2">
+                      <v-card class="pt-4 shadow-none">
+                        <v-row class="ma-0">
+                          <v-col
+                            md="3"
+                            class="pa-2 rounded-lg"
+                            v-for="index in 6"
+                            :key="index"
+                          >
+                            <input
+                              type="radio"
+                              :id="index"
+                              :value="index"
+                              v-model="project_profile.selected_img"
+                              style="display: none"
+                              class="image_select_radio"
+                            />
+                            <label :for="index"
+                              ><img
+                                src="~/assets/img/project_profile_image.svg"
+                                class="text-center mx-auto rounded-lg cursor-pointer"
+                                height="80"
+                              />
+                              <v-icon class="check_icon_img"
+                                >mdi-check-circle-outline</v-icon
+                              >
+                            </label>
+                          </v-col>
+                        </v-row>
+                      </v-card>
+                    </v-tab-item>
+                    <v-tab-item key="3">
+                      <v-card class="pt-4 shadow-none">
+                        <div
+                          class="text-none ma-2 d-flex align-center upload-img-custom"
+                          round
+                          depressed
+                          @click="onButtonClick"
+                        >
+                          <div>
+                            <v-icon> mdi-cloud-upload-outline </v-icon> <br />
                             {{ buttonText }}
                           </div>
                         </div>
@@ -170,30 +401,43 @@ export default {
         select_emoji: '',
         selected_img: '',
         selectedFile: null,
-        isSelecting: false
+      },
+      project_cover: {
+        tab: 0,
+        select_color: '',
+        selected_img: '',
+        selectedFile: null,
       },
     }
   },
   computed: {
     buttonText() {
-      return this.project_profile.selectedFile ? this.project_profile.selectedFile.name : 'Upload Image'
-    }
+      return this.project_profile.selectedFile
+        ? this.project_profile.selectedFile.name
+        : 'Upload Image'
+    },
+    buttonTextCover() {
+      return this.project_cover.selectedFile
+        ? this.project_cover.selectedFile.name
+        : 'Upload Image'
+    },
   },
   methods: {
     selectEmoji(emoji) {
       this.project_profile.select_emoji = emoji.data
     },
     onButtonClick() {
-      this.project_profile.isSelecting = true
-      window.addEventListener('focus', () => {
-        this.isSelecting = false
-      }, { once: true })
-
       this.$refs.uploader.click()
     },
     onFileChanged(e) {
       this.project_profile.selectedFile = e.target.files[0]
-    }
+    },
+    onButtonClickCover() {
+      this.$refs.uploader.click()
+    },
+    onFileChangedCover(e) {
+      this.project_cover.selectedFile = e.target.files[0]
+    },
   },
 }
 </script>
