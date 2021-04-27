@@ -181,7 +181,7 @@
             style="position: relative; top: 8px; left: 285px;z-index:99;"
           />
         </div>
-        <v-card id="notification">
+        <v-card id="notification" class="card-shadow card-border">
           <v-list>
             <v-list-item>
               <v-list-item-content>
@@ -290,7 +290,7 @@
             style="position: relative; top: 8px; left: 285px;z-index:99;"
           />
         </div>
-        <v-card id="notification" class="card-shadow">
+        <v-card id="notification" class="card-shadow card-border">
           <v-list>
             <v-list-item>
               <v-list-item-content>

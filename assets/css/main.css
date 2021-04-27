@@ -37,11 +37,85 @@
 .v-menu__content{
     box-shadow: 16px 16px 42px rgba(51, 51, 51, 0.12) !important;
 }
-.v-menu__content--fixed{
+.v-menu__content--fixed, .shadow-none{
     /* top: 55px !important; */
     border-radius: 8px !important;
     box-shadow: unset !important;
 }
+
+.shadow-none{
+    box-shadow: unset !important;
+}
+.border-none{
+    border-bottom: none !important;
+}
+.tab-border-bottom-none .v-tabs-slider{
+    display: none !important;
+}
+
+.custom_emoji_parent #EmojiPicker{
+    width: 100% !important;
+    height: 246px !important; 
+}
+
+#EmojiPicker input:focus {
+    background-color: #fdfdfd;
+    border: 1px solid rgb(138, 138, 138);
+    outline: 0;
+}
+
+#EmojiPicker span{
+    width: 36px !important;
+}
+.emoji-active{
+    background: #45bec5 !important;
+    border-radius: 5px !important;
+}
+.project_profile_tab_btn{
+    border: 1px solid;
+    border-radius: 8px;
+    margin-right: 10px;
+}
+.project_profile_tab_btn_active{
+    background: #34495E;
+    color: white !important;
+}
+
+div[aria-expanded="true"] .aria_expanded_true, div[aria-expanded="true"] .aria_expanded_true{
+    color: #34495E !important;
+}
+div[aria-expanded="false"] .aria_expanded_true, div[aria-expanded="false"] .aria_expanded_true{
+    color: #787878 !important;
+}
+.cursor-pointer{
+    cursor: pointer !important;
+}
+div[aria-expanded="true"] .border_color_aria{
+    border: 1.6px solid #34495E;
+}
+div[aria-expanded="false"] .border_color_aria{
+    border: 1.6px solid #787878;
+}
+.check_icon_img {
+    position: absolute !important;
+    transform: translate(35px, -60px);
+    display: none !important;
+ }
+ .upload-img-custom{
+    background: #F6F6F6;
+    border-radius: 16px;
+    height: 150px;
+    text-align: center !important;
+    justify-content: center;
+    border: 1px dashed #BEBEBE;
+ }
+.image_select_radio[type="radio"]:checked+label .check_icon_img {
+    display: block !important;
+}
+
+.image_select_radio[type="radio"]:checked+label img {
+    opacity: .5;
+ }
 
 .badge-notification {
     z-index: 99999999;
