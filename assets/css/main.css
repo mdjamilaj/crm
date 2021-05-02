@@ -35,9 +35,25 @@
     font-size: 12px;
 }
 .project_profile_custom_color_div{
-    height: 80px;
-    width: 85px;
+    height: 90px;
+    width: 90px;
     border-radius: 10px;
+}
+.custom-combox, .custom-combox div, .custom-combox div div{
+    min-height: 150px;
+}
+.ql-toolbar{
+    border-radius: 8px 8px 0px 0px !important;
+}
+#quill-container, .ql-editor, .ql-editor{
+    border-radius: 0px 0px 8px 8px !important;
+}
+.card-border-dashed{
+    border: 1.5px dashed #BEBEBE;
+}
+.custom-combox .v-select__selections, .custom-combox .v-select__slot{
+    align-items: normal !important;
+    display: unset !important;
 }
 .v-menu__content{
     box-shadow: 16px 16px 42px rgba(51, 51, 51, 0.12) !important;

@@ -168,7 +168,7 @@
               v-if="notificationUnseen > 0"
               :content="notificationUnseen"
               class="badge-notification"
-              color="#31B8B6"
+              color="#34495E"
             ></v-badge>
             <v-icon size="24">mdi-email-outline</v-icon>
           </v-btn>
@@ -277,7 +277,7 @@
               v-if="notificationUnseen > 0"
               :content="notificationUnseen"
               class="badge-notification"
-              color="#31B8B6"
+              color="#34495E"
             ></v-badge>
             <v-icon size="24">mdi-bell-outline</v-icon>
           </v-btn>
