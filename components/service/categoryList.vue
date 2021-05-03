@@ -24,7 +24,7 @@
                 </v-card>
               </v-menu>
             </div>
-            <div class="px-4 pb-5">
+            <div class="px-4 pb-2">
               <h4 class="font-weight-medium">{{ category.name }}</h4>
             </div>
           </v-card>

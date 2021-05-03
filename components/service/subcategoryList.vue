@@ -1,6 +1,6 @@
 <template>
   <div v-if="selected_category" class="mt-5">
-    <h2 v-if="selected_category" class="my-2">{{ selected_category.name }}</h2>
+    <h2 v-if="selected_category" class="my-2 custom-title">{{ selected_category.name }}</h2>
     <v-row>
       <v-col
         xs="6"
@@ -48,7 +48,7 @@
                 </v-card>
               </v-menu>
             </div>
-            <div class="px-4 pb-5">
+            <div class="px-4 pb-2">
               <h4 class="font-weight-medium">{{ sub_category.name }}</h4>
             </div>
           </v-card>

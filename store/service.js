@@ -22,9 +22,13 @@ export const state = () => ({
     selected_sub_sub_category: null,
     has_sub_sub_category: true,
     project_discretion: null,
+    technology: [],
 })
 
 export const mutations = {
+    setTechnology(state, payload) {
+        state.technology = payload
+    },
     setCategories(state, payload) {
         state.categories = payload
     },

@@ -45,6 +45,70 @@
 .ql-toolbar{
     border-radius: 8px 8px 0px 0px !important;
 }
+.custom-title{
+    font-weight: 500;
+    font-size: 23px;
+    color: #34495E;
+}
+.custom-subtitle{
+    font-weight: 500;
+    font-size: 16px;
+}
+.custom-techknowlogy{
+    background: rgba(219, 234, 249, 1) !important;
+    padding: 5px !important;
+    color: rgba(52, 73, 94, 1) !important;
+    text-align: center !important;
+    margin-right: 10px !important;
+    border-radius: 24px !important;
+}
+.bg-none{
+    background: unset !important;
+}
+.popular_skils .v-expansion-panel{
+    background: unset !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    box-shadow: unset !important;
+}
+.popular_skils .v-expansion-panel-header{
+    padding: 0 !important;
+}
+.popular_skils .v-expansion-panel-header__icon{
+    margin-left: 5px !important;
+}
+.popular_skils .v-expansion-panel-content__wrap{
+    padding: 0 0px 16px !important; 
+}
+.popular_skils .v-expansion-panel::before{
+    box-shadow: unset !important;
+}
+.popular_skils .custom-subtitle{
+    flex: unset !important;
+}
+.popular_skils .custom-techknowlogy-suggest{
+    background: rgba(255, 255, 255, 1) !important;
+    padding: 5px !important;
+    color:rgba(93, 114, 135, 1) !important;
+    text-align: center !important;
+    margin-right: 10px !important;
+    border-radius: 24px !important;
+    border: 1px solid #CDCDCD !important;
+}
+#dropzone{
+    min-height: 200px !important;
+    border-radius: 8px !important;
+    border: 1.8px dashed #979393;
+}
+.dz-message{
+    margin-top: 28px !important;
+}
+.vue-dropzone>.dz-preview .dz-details {
+    background-color: var(--v-primary-base);
+}
+.dz-remove{
+    
+}
 #quill-container, .ql-editor, .ql-editor{
     border-radius: 0px 0px 8px 8px !important;
 }
@@ -62,6 +126,26 @@
     /* top: 55px !important; */
     border-radius: 8px !important;
     box-shadow: unset !important;
+}
+.dz-preview, .dz-image img{
+    width: 180px !important;
+    height: 180px !important;
+}
+.dz-preview{
+    border: 1px solid #f3f3f3;
+    padding: 1px;  
+    box-shadow: 16px 16px 42px rgba(51, 51, 51, 0.12) !important;
+    border-radius: 8px !important;
+}
+.dz-details{
+    border-radius: 8px !important;
+}
+.dz-remove{
+    padding: 5px !important;
+    border-radius: 5px !important;
+    margin: auto !important;
+    left: 29px !important;
+    text-decoration: none !important;
 }
 
 .shadow-none{

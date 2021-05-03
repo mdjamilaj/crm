@@ -61,7 +61,7 @@ export default {
         },
         light: {
           mprimary: '#2B3897',
-          primary: '#33B8C0',
+          primary: '#34495E',
           accent: '#c4c9e8',
           secondary: '#2B3897',
           info: '#29a1bf',

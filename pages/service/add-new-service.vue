@@ -1,5 +1,6 @@
 <template>
   <div>
+    <ValidationObserver ref="form" v-slot="{ invalid }">
     <v-row>
       <v-col xs="12" sm="6" md="6" class="mt-5">
         <v-text-field
@@ -306,6 +307,7 @@
     <subcategory-list />
     <subsubcategory-list />
     <text-fields />
+    </ValidationObserver>
   </div>
 </template>
 
@@ -315,6 +317,11 @@ import categoryList from '@/components/service/categoryList'
 import subcategoryList from '@/components/service/subcategoryList'
 import subsubcategoryList from '@/components/service/subsubcategoryList'
 import textFields from '@/components/service/textFields'
+import { extend, ValidationObserver, ValidationProvider } from "vee-validate";
+import { email, required } from "vee-validate/dist/rules";
+
+extend("email", email);
+extend("required", required);
 export default {
   components: {
     VEmojiPicker,
@@ -322,9 +329,12 @@ export default {
     subcategoryList,
     subsubcategoryList,
     textFields,
+    ValidationObserver, 
+    ValidationProvider
   },
   data() {
     return {
+      search: [],
       colors: ['#126E82', '#2C3E50', '#95A5A6'],
       tab: 0,
       project_profile: {

@@ -1,6 +1,6 @@
 <template>
   <div v-if="selected_sub_category && sub_sub_categories.length > 0" class="mt-5">
-    <h2 v-if="selected_sub_category" class="my-2"> {{ selected_sub_category.name }} </h2>
+    <h2 v-if="selected_sub_category" class="my-2 custom-title"> {{ selected_sub_category.name }} </h2>
     <v-row>
       <v-col xs="6" sm="3" md="3" v-for="(sub_sub_category, index) in sub_sub_categories" :key="index">
         <div class="card-border-dashed pa-2 card-border">
@@ -25,7 +25,7 @@
                 </v-card>
               </v-menu>
             </div>
-            <div class="px-4 pb-5">
+            <div class="px-4 pb-2">
               <h4 class="font-weight-medium">{{ sub_sub_category.name }}</h4>
             </div>
           </v-card>
