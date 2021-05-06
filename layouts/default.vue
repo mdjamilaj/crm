@@ -8,14 +8,14 @@
       app
     >
       <v-list-item class="text-center mt-2">
-        <v-list-item-content>
+        <v-list-item-content class="py-0">
           <v-list-item-title class="title">
-            <img src="~/assets/img/mlogo.svg" class="text-center" height="40" />
+            <img src="~/assets/img/mlogo.png" class="text-center" height="60" />
           </v-list-item-title>
         </v-list-item-content>
       </v-list-item>
 
-      <v-list class="mt-4">
+      <v-list class="mt-3">
         <v-list-item
           v-for="(item, i) in items"
           :key="i"

@@ -31,6 +31,9 @@
     height: 100% !important;
     width: 100% !important;
 }
+.br-16{
+    border-radius: 16px !important;
+}
 .fs-12{
     font-size: 12px;
 }
@@ -53,6 +56,11 @@
 .custom-subtitle{
     font-weight: 500;
     font-size: 16px;
+}
+.project_cover_btn span{
+    color: white !important;
+    text-transform: none !important;
+    font-weight: 400 !important;
 }
 .custom-techknowlogy{
     background: rgba(219, 234, 249, 1) !important;
@@ -85,6 +93,12 @@
 }
 .popular_skils .custom-subtitle{
     flex: unset !important;
+}
+.border-solid{
+    border: 1px solid #BEBEBE;
+}
+.border-radius-12{
+    border-radius: 12px;
 }
 .popular_skils .custom-techknowlogy-suggest{
     background: rgba(255, 255, 255, 1) !important;
@@ -126,6 +140,14 @@
     /* top: 55px !important; */
     border-radius: 8px !important;
     box-shadow: unset !important;
+}
+.border-solid-sm{
+    border: 1px solid #BEBEBE !important; 
+}
+.normal-btn .v-btn__content{
+    color: rgba(85, 85, 85, 1) !important;
+    text-transform: none !important;
+    font-weight: 400 !important;
 }
 .dz-preview, .dz-image img{
     width: 180px !important;
@@ -191,6 +213,14 @@ div[aria-expanded="true"] .aria_expanded_true, div[aria-expanded="true"] .aria_e
 }
 div[aria-expanded="false"] .aria_expanded_true, div[aria-expanded="false"] .aria_expanded_true{
     color: #787878 !important;
+}
+.aria-expanded-btn{
+    border-radius: 12px !important;
+}
+.aria-expanded-btn[aria-expanded="true"]
+{
+    background: #34495E !important;
+    color: #ffffff !important;
 }
 .cursor-pointer{
     cursor: pointer !important;

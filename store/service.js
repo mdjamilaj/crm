@@ -23,9 +23,18 @@ export const state = () => ({
     has_sub_sub_category: true,
     project_discretion: null,
     technology: [],
+    fixed_budget: null,
+    add_badget_note: null,
+    importent_note_project: null,
 })
 
 export const mutations = {
+    setAdd_badget_note(state, payload) {
+        state.add_badget_note = payload
+    },
+    setFixed_budget(state, payload) {
+        state.fixed_budget = payload
+    },
     setTechnology(state, payload) {
         state.technology = payload
     },
@@ -52,5 +61,8 @@ export const mutations = {
     },
     setProject_discretion(state, payload) {
         state.project_discretion = payload
+    },
+    setImportent_note_project(state, payload) {
+        state.importent_note_project = payload
     },
 }
