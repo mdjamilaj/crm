@@ -544,8 +544,8 @@ export default {
         },
         {
           icon: 'mdi-package-variant-closed',
-          title: 'Packege',
-          to: '/packege',
+          title: 'Package',
+          to: '/package',
         },
         {
           icon: 'mdi-message-draw',

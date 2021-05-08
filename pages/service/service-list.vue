@@ -4,6 +4,7 @@
       class="normal-btn border-radius-12 shadow-none border-solid-sm"
       style="background: white"
       min-width="130px"
+      @click="$router.push('/service/add-new-service');"
     >
       <v-icon size="18" class="mr-2">mdi-plus-circle-outline</v-icon> Add New
     </v-btn>
@@ -11,7 +12,7 @@
     <div class="d-flex flex-wrap align-center justify-space-between">
       <div class="d-flex flex-wrap align-center">
         <v-btn
-          class="normal-btn border-radius-12 shadow-none border-solid-sm"
+          class="mr-8 normal-btn border-radius-12 shadow-none border-solid-sm"
           style="background: white"
           min-width="130px"
         >
@@ -25,7 +26,7 @@
         >
           <template v-slot:activator="{ on, attrs }">
             <v-btn
-              class="ml-8 normal-btn border-radius-12 shadow-none border-solid-sm"
+              class="mr-8 normal-btn border-radius-12 shadow-none border-solid-sm"
               style="background: white"
               v-bind="attrs"
               v-on="on"
@@ -54,7 +55,7 @@
         >
           <template v-slot:activator="{ on, attrs }">
             <v-btn
-              class="ml-8 normal-btn border-radius-12 shadow-none border-solid-sm"
+              class="xs-mt-2 normal-btn border-radius-12 shadow-none border-solid-sm"
               style="background: white"
               v-bind="attrs"
               v-on="on"
@@ -76,9 +77,9 @@
           </v-list>
         </v-menu>
       </div>
-      <div class="d-flex flex-wrap align-center">
-        <v-btn @click="view_type = 'list'" style="background: white" class="btn-shadow normal-btn pa-2" icon><v-icon size="18" class="ma-3" style="color:#666666;">mdi-format-list-bulleted-square</v-icon></v-btn>
-        <v-btn @click="view_type = 'gird'" style="background: white" class="ml-5 btn-shadow normal-btn pa-2" icon><v-icon size="18" class="ma-3" style="color:#666666;">mdi-table-eye</v-icon></v-btn>
+      <div class="d-flex flex-wrap align-center xs-mt-2">
+        <v-btn @click="view_type = 'list'" style="background: white" class="mr-5 btn-shadow normal-btn pa-2" icon><v-icon size="18" class="ma-3" style="color:#666666;">mdi-format-list-bulleted-square</v-icon></v-btn>
+        <v-btn @click="view_type = 'gird'" style="background: white" class="btn-shadow normal-btn pa-2" icon><v-icon size="18" class="ma-3" style="color:#666666;">mdi-table-eye</v-icon></v-btn>
       </div>
     </div>
     <div class="mt-10">
