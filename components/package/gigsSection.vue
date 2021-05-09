@@ -6,7 +6,7 @@
     <div>
       <v-row>
         <v-col xs="12" sm="6" md="3" v-for="(item, index) in data" :key="index">
-          <v-card class="pa-0 shadow-none w-100 gig-card-slide">
+          <v-card class="pa-0 shadow-none w-100 gig-card-slide" @click="$router.push('/package/1')">
             <v-img
               :src="require('@/assets/img/slide/' + item.img)"
               height="180"

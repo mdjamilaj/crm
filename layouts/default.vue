@@ -15,22 +15,71 @@
         </v-list-item-content>
       </v-list-item>
 
-      <v-list class="mt-3">
+      <v-list>
         <v-list-item
+          v-if="!item.subTtems"
           v-for="(item, i) in items"
           :key="i"
           :to="item.to"
           router
           exact
-          class="v-list-item-custom"
         >
-          <v-list-item-action class="v-list-item__action-custom">
+          <v-list-item-action>
             <v-icon>{{ item.icon }}</v-icon>
           </v-list-item-action>
           <v-list-item-content>
             <v-list-item-title v-text="item.title" />
           </v-list-item-content>
         </v-list-item>
+        <!-- <v-list-group
+            v-else
+            :key="(item, i) in items"
+            no-action
+        >
+            <template v-slot:activator>
+               <v-list-tile>
+                 <v-list-tile-content>
+                   <v-list-tile-title>{{ item.title }}</v-list-tile-title>
+                 </v-list-tile-content>
+               </v-list-tile>
+             </template>
+
+            <v-list-tile
+                v-for="subitem in item.subTtems"
+                :to="subitem.to"
+                :key="subitem.title"
+            >
+                <v-list-tile-title v-text="subitem.title" />
+            </v-list-tile>
+
+        </v-list-group> -->
+        <v-list-group
+          v-else
+          :for="(item, i) in items"
+          :key="i"
+          :value="false"
+          :prepend-icon="item.icon"
+          @click="marker = !marker"
+          :append-icon="marker ? 'mdi-chevron-up' : 'mdi-chevron-right'"
+        >
+          <template v-slot:activator>
+            <v-list-item-title>{{ item.title }}</v-list-item-title>
+          </template>
+
+          <v-list-item
+            v-for="subitem in item.subTtems"
+            :to="subitem.to"
+            :key="subitem.id"
+            class="pl-13"
+          >
+            <v-list-item-action>
+              <v-icon>{{ subitem.icon }}</v-icon>
+            </v-list-item-action>
+            <v-list-item-content>
+              <v-list-item-title v-text="subitem.title" />
+            </v-list-item-content>
+          </v-list-item>
+        </v-list-group>
       </v-list>
     </v-navigation-drawer>
     <v-app-bar :clipped-left="clipped" fixed app>
@@ -457,6 +506,7 @@
 export default {
   data() {
     return {
+      marker:false,
       bg: require('@/assets/img/bg.png'),
       notification: [
         {
@@ -542,10 +592,27 @@ export default {
           title: 'Service',
           to: '/service',
         },
+        // {
+        //   icon: 'mdi-package-variant-closed',
+        //   title: 'Package',
+        //   to: '/package',
+        // },
         {
           icon: 'mdi-package-variant-closed',
           title: 'Package',
           to: '/package',
+          subTtems : [
+            {
+              icon: 'mdi-cart',
+              title: 'Buy Now',
+              to: '/package',
+            },
+            {
+              icon: 'mdi-package-variant-closed',
+              title: 'My Product',
+              to: '/my-product',
+            },
+          ]
         },
         {
           icon: 'mdi-message-draw',

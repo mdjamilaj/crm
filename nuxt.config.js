@@ -6,7 +6,7 @@ export default {
   },
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
-    titleTemplate: '%s',
+    titleTemplate: '%s - Devute CRM',
     title: 'Devute CRM',
     htmlAttrs: {
       lang: 'en'

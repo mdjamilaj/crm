@@ -8,6 +8,11 @@
 
 <script>
 export default {
+  head() {
+    return {
+      title: "Dashboard",
+    };
+  },
   beforeMount() {
     this.$store.commit('common/setHeaderTitle', '')
   },
