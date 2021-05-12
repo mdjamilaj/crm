@@ -30,6 +30,7 @@
           >
             <div class="text-right">
               <v-menu
+                open-on-hover
                 top
                 origin="center center"
                 transition="scale-transition"

@@ -7,6 +7,7 @@
           <v-card @click="selected_sub_sub_category = sub_sub_category" class="card-border shadow-none pa-2" style="min-height: 110px;" :dark="selected_sub_sub_category && selected_sub_sub_category.id == sub_sub_category.id" :style="selected_sub_sub_category && selected_sub_sub_category.id == sub_sub_category.id ? 'background: #34495E;' : 'background: #E7E7E7;'">
             <div class="text-right">
               <v-menu
+                open-on-hover
                 top
                 origin="center center"
                 transition="scale-transition"

@@ -214,6 +214,19 @@
     background: #34495E;
     color: white !important;
 }
+.footer-table tr{
+    background: white !important;
+}
+.package td:last-child,.package th:last-child {
+    border-right: none !important;
+}
+.package-th {
+    vertical-align: -webkit-baseline-middle;
+}
+/* .package tr:nth-child(even) {background: white !important;} */
+.footer-table tr td{
+    border: none !important;
+}
 
 div[aria-expanded="true"] .aria_expanded_true, div[aria-expanded="true"] .aria_expanded_true{
     color: #34495E !important;
@@ -414,7 +427,93 @@ div[aria-expanded="false"] .border_color_aria{
 .md-w-100{
     width: 100% !important;
 }
+.expansion-bg-none{
+    background: none !important;
+}
+.expansion-bg-none .v-expansion-panel::before{
+    box-shadow: unset !important;
+}
+.expansion-bg-none .v-expansion-panel{
+    /* background: none !important; */
+}
+.bg-none-tab .theme--light{
+    background: none !important;
+}
+.bg-none-tab-item{
+    background: none !important;
+}
+.text-gray{
+    color: rgba(119, 119, 119, 1);
+}
+.body-span {
+    font-size: 15px;
+    font-weight: 400;
+    color: rgba(85, 85, 85, 1);
+}
+.package_customize_card:hover .package_customize_card_hover_div{
+    display: flex;
+    transition: all 1s;
+    -webkit-transition: all 1s;
+}
+.package_customize_card_hover_div{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: rgba(52, 73, 94, 0.42);
+    top: 0;
+    z-index: 2;
+    border-radius: 14px;
+    align-items: center;
+    vertical-align: middle;
+    display: none;
+    justify-content: center;
+}
+.text-case-unset{
+    text-transform: unset !important;
+}
+.package_customize_card{
+    /* box-shadow: 0 5px 11px 0 rgb(0 0 0 / 10%) !important; */
+    border: 1px solid #ebeaea !important;
+}
 
+element.style {
+    left: 0px;
+    right: auto;
+    position: relative;
+}
+.example_site_link .v-label {
+    font-size: 22px !important;
+    font-weight: 400 !important;
+    color: rgba(52, 73, 94, 1) !important;
+}
+.example_site_link i{
+    font-size: 28px !important;
+}
+.example_site_link1 .v-label {
+    font-size: 18px !important;
+    font-weight: 400 !important;
+    color: rgba(52, 73, 94, 1) !important;
+}
+.example_site_link1 i{
+    font-size: 24px !important;
+}
+.summary{
+    border: 2px solid #7E7D7D;
+}
+.summary span{
+    width: 70px;
+    text-align: left;
+}
+.box{
+    border: 1.2px solid #F3F3F3;
+    border-radius: 4px;
+}
+.box:hover{
+    border: 1.2px solid #CFD0D0;
+    background:rgba(246, 246, 246, 1);
+    box-sizing: border-box;
+    border-radius: 4px;
+}
 @media screen and (max-width: 768px) {
     .feedback-custom-margin{
         margin: 15px 10px 0px 10px !important;

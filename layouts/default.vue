@@ -495,7 +495,7 @@
       style="background-position: center"
     >
       <!-- <img src="@/assets/img/bg.png" alt=""> -->
-      <v-container :fluid="true">
+      <v-container :fluid="false">
         <nuxt />
       </v-container>
     </v-main>
