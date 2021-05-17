@@ -1,5 +1,5 @@
 export const state = () => ({
-    example_site_link: false,
+    example_site_link: 1,
     link: null,
     example_website_project: false,
     website_project: null,

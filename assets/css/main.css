@@ -497,12 +497,19 @@ element.style {
 .example_site_link1 i{
     font-size: 24px !important;
 }
+.package-example-btn{
+    min-height: 50px;
+    min-width: 250px !important;
+}
 .summary{
-    border: 2px solid #7E7D7D;
+    border: 2px solid #d8d6d6;
 }
 .summary span{
     width: 70px;
     text-align: left;
+}
+.inner-filed-border-none .v-input__slot:before{
+    border: 0px solid !important;
 }
 .box{
     border: 1.2px solid #F3F3F3;
@@ -514,7 +521,34 @@ element.style {
     box-sizing: border-box;
     border-radius: 4px;
 }
+.package-example-div{
+    display: flex;
+    justify-content: space-between;
+}
+.inner-filed-border fieldset{
+    border: 1px solid #d8d6d6;
+}
+.login-card{
+    min-height: 560px;
+    display: table !important;
+}
+.login-card-child{
+    display: table-cell !important;
+    vertical-align: middle !important;
+}
+.online-active-icon{
+    position: absolute !important;
+    transform: translate(27px, 32px) !important;
+    z-index: 999999 !important;
+}
 @media screen and (max-width: 768px) {
+    .package-example-btn{
+        min-height: 40px;
+        min-width: 150px !important;
+    }
+    .login-card{
+        min-height: 560px;
+    }
     .feedback-custom-margin{
         margin: 15px 10px 0px 10px !important;
     }
@@ -527,6 +561,14 @@ element.style {
 }
 
 @media screen and (max-width: 500px) {
+    .login-card{
+        min-height: 360px;
+    }
+.package-example-btn{
+    min-height: 40px;
+    min-width: 90px !important;
+    font-size: .75rem;
+}
 .xs-display-unset{
     display: unset !important;
 }

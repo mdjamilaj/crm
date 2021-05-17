@@ -133,7 +133,7 @@
                   ></v-text-field>
                 </ValidationProvider>
                 <span
-                  class="body-2 mt-2 text-center primary--text"
+                  class="body-2 mt-2 text-center primary--text  cursor-pointer"
                   style="display: flow-root; justify-content: center"
                   @click="add_badget_note_dailog = true"
                 >
@@ -204,7 +204,7 @@
                   </ValidationProvider>
                 </div>
                 <span
-                  class="body-2 mt-2 text-center primary--text"
+                  class="body-2 mt-2 text-center primary--text  cursor-pointer"
                   style="display: flow-root; justify-content: center"
                   @click="add_badget_note_dailog = true"
                 >
@@ -234,7 +234,7 @@
               </template>
               <v-card class="border-solid pa-3 text-center">
                 <span
-                  class="body-2 text-center primary--text"
+                  class="body-2 text-center primary--text cursor-pointer"
                   style="display: flow-root; justify-content: center"
                   @click="add_badget_note_dailog = true"
                 >

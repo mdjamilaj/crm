@@ -4,9 +4,8 @@
       <v-img
         :src="require('@/assets/img/service_layer1.svg')"
         class="mr-3"
-        width="300"
       ></v-img>
-      <v-btn :to="'/service/add-new-service'" class="primary btn-shadow mt-5 btn-border" min-width="200">Add Service</v-btn>
+      <v-btn :to="'/service/add-new-service'" class="primary btn-shadow mt-10 btn-border scope-btn" min-height="50">Add Service</v-btn>
     </div>
   </div>
 </template>
@@ -21,7 +20,22 @@ export default {
 
 <style scoped>
 .center-div{
-    width: 300px;
+    width: 400px;
     text-align: center;
+}
+.scope-btn{
+  min-width: 300px !important;
+}
+.scope-btn span, .scope-btn{
+  text-transform: unset !important;
+}
+@media screen and (max-width: 500px) {
+  .center-div{
+    width: 250px;
+    text-align: center;
+}
+.scope-btn{
+  min-width: 250px !important;
+}
 }
 </style>

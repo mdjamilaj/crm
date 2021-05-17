@@ -227,7 +227,7 @@
           <img
             src="~/assets/img/arrow-up.svg"
             alt=""
-            style="position: relative; top: 8px; left: 285px;z-index:99;"
+            style="position: relative; top: 8px; left: 285px; z-index: 99"
           />
         </div>
         <v-card id="notification" class="card-shadow card-border">
@@ -336,7 +336,7 @@
           <img
             src="~/assets/img/arrow-up.svg"
             alt=""
-            style="position: relative; top: 8px; left: 285px;z-index:99;"
+            style="position: relative; top: 8px; left: 285px; z-index: 99"
           />
         </div>
         <v-card id="notification" class="card-shadow card-border">
@@ -506,7 +506,7 @@
 export default {
   data() {
     return {
-      marker:false,
+      marker: false,
       bg: require('@/assets/img/bg.png'),
       notification: [
         {
@@ -601,7 +601,7 @@ export default {
           icon: 'mdi-package-variant-closed',
           title: 'Package',
           to: '/package',
-          subTtems : [
+          subTtems: [
             {
               icon: 'mdi-cart',
               title: 'Buy Now',
@@ -612,12 +612,17 @@ export default {
               title: 'My Product',
               to: '/my-product',
             },
-          ]
+          ],
         },
         {
           icon: 'mdi-message-draw',
           title: 'Feedback',
           to: '/feedback',
+        },
+        {
+          icon: 'mdi-message-processing-outline',
+          title: 'Chat',
+          to: '/chat',
         },
         {
           icon: 'mdi-newspaper',
