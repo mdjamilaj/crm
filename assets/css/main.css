@@ -415,6 +415,19 @@ div[aria-expanded="false"] .border_color_aria{
 .w-100{
     width: 100% !important;
 }
+.chat-text-area .v-input__slot{
+    padding: 0 !important;
+}
+/* .chat-text-area textarea{
+    margin-top: 0 !important;
+} */
+.chat-text-area-box{
+    border: 1px solid #dedddd;
+    border-radius: 6px;
+}
+.chat-text-area-box-inner-div{
+    padding: 8px;
+}
 .top-slider{
     width: 60%;
     margin: auto;
